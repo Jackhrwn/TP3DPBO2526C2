@@ -11,9 +11,9 @@ private:                                                // Hanya bisa diakses ol
     double ipk;                                         // Menyimpan IPK mahasiswa
     vector<string> mataKuliahDiambil;                   // Menyimpan daftar mata kuliah yang diambil
 
-public:                                                                      // Bisa diakses dari luar class
-    Mahasiswa(string nama, string id, int umur, string jurusan, double ipk)  // Constructor
-        : Manusia(nama, id, umur), jurusan(jurusan), ipk(ipk) {}             // Inisialisasi data
+public:                                                                        // Bisa diakses dari luar class
+    Mahasiswa(string nama, string id, int umur, string jurusan, double ipk)    // Constructor
+        : Manusia(nama, id, umur), jurusan(jurusan), ipk(ipk) {}               // Inisialisasi data
 
     // --- Getter dan Setter ---
 
@@ -31,11 +31,11 @@ public:                                                                      // 
 
     void display() {                                                           // Tampilkan data mahasiswa
         cout << "[MAHASISWA] ";                                                // Label mahasiswa
-        cout << left << setw(6) << nama << " | ";                              // Nama (lebar 12 + 2 spasi)
-        cout << "ID: " << left << setw(3) << id << " | ";                      // ID (lebar 5 + 2 spasi)
-        cout << "Umur: " << left << setw(1) << umur << " | ";                  // Umur (lebar 3 + 2 spasi)
-        cout << "Jurusan: " << left << setw(13) << jurusan << " | ";           // Jurusan (lebar 17 + 2 spasi)
-        cout << "IPK: " << left << setw(2) << ipk;                             // IPK (lebar 4)
+        cout << left << setw(6) << nama << " | ";                              // Nama (lebar 6 + 2 spasi)
+        cout << "ID: " << left << setw(3) << id << " | ";                      // ID (lebar 3 + 2 spasi)
+        cout << "Umur: " << left << setw(1) << umur << " | ";                  // Umur (lebar 1 + 2 spasi)
+        cout << "Jurusan: " << left << setw(13) << jurusan << " | ";           // Jurusan (lebar 13 + 2 spasi)
+        cout << "IPK: " << left << setw(2) << ipk;                             // IPK (lebar 2)
         if (!mataKuliahDiambil.empty()) {                                      // Jika ada mata kuliah
             cout << " | Mata Kuliah: ";                                        // Label mata kuliah
             for (size_t i = 0; i < mataKuliahDiambil.size(); i++) {            // Loop semua mata kuliah

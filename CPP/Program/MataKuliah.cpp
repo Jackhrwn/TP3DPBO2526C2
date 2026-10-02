@@ -28,9 +28,9 @@ public:                                                                         
     void setDosen(Dosen* d) { dosen = d; }                    // Ubah dosen
 
     void display() {                                          // Tampilkan data mata kuliah
-        cout << left << setw(4) << kodeMataKuliah << "  " << left << setw(12) << namaMataKuliah << " | ";  // Kode + nama (lebar 34 + 3 spasi)
-        cout << "SKS: " << left << setw(1) << sks << " | "; // SKS (lebar 2 + 3 spasi)
+        cout << left << setw(5) << kodeMataKuliah << "  " << left << setw(12) << namaMataKuliah << " | ";  // Kode + nama 
+        cout << "SKS: " << left << setw(1) << sks << " | ";   // SKS 
         cout << "Dosen: ";                                    // Label dosen
-        cout << dosen->getNama() << " (" << dosen->getDepartemen() << ")";  // Nama dan departemen dosen
+        cout << dosen->getNama() << " (" << dosen->getProgramStudi() << ")";  // Nama dan program studi dosen
     }
 };

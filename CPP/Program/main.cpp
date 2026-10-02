@@ -1,8 +1,8 @@
 #include "Manusia.cpp"                                // Include class Manusia
 #include "Dosen.cpp"                                  // Include class Dosen
-#include "MataKuliah.cpp"                             // Include class MataKuliah
 #include "Mahasiswa.cpp"                              // Include class Mahasiswa
-#include "Departemen.cpp"                             // Include class Departemen
+#include "MataKuliah.cpp"                             // Include class MataKuliah
+#include "ProgramStudi.cpp"                           // Include class ProgramStudi
 
 // =================================== MAIN ===================================
 int main() {                                                    // Fungsi utama program
@@ -34,12 +34,12 @@ int main() {                                                    // Fungsi utama 
     MataKuliah mk2("CS201", "Srukdat", 4, &dosen1);             // MK kedua
     MataKuliah mk3("PHY101", "Fisika Dasar", 3, &dosen2);       // MK ketiga
 
-    // --- Buat Departemen (Composition: Departemen has-a Dosen as ketua) ---
-    Departemen depIlkom("Ilmu Komputer", &dosen1);              // Departemen Ilmu Komputer
+    // --- Buat ProgramStudi (Composition: PROGRAM STUDI has-a Dosen as ketua) ---
+    ProgramStudi depIlkom("Ilmu Komputer", &dosen1);            // program studi Ilmu Komputer
     depIlkom.tambahMataKuliah(mk1);                             // Tambah mk1 ke depIlkom
     depIlkom.tambahMataKuliah(mk2);                             // Tambah mk2 ke depIlkom
 
-    Departemen depFisika("Fisika", &dosen2);                    // Departemen Fisika
+    ProgramStudi depFisika("Fisika", &dosen2);                  // program studi Fisika
     depFisika.tambahMataKuliah(mk3);                            // Tambah mk3 ke depFisika
 
     // ========================= TAMPILKAN SEBELUM MENAMBAH ==========================
@@ -54,7 +54,7 @@ int main() {                                                    // Fungsi utama 
     mhs1.display(); cout << "\n";                        // Tampilkan mhs1
     mhs2.display(); cout << "\n\n";                      // Tampilkan mhs2
 
-    cout << "--- DEPARTEMEN ---\n";                      // Label departemen
+    cout << "--- PROGRAM STUDI ---\n";                   // Label program studi
     depIlkom.display();                                  // Tampilkan depIlkom
     depFisika.display();                                 // Tampilkan depFisika
 
@@ -75,16 +75,22 @@ int main() {                                                    // Fungsi utama 
     MataKuliah mk4("MATH101", "Kalkulus I", 4, &dosen4);             // MK keempat
     cout << "Ditambahkan mata kuliah baru: MATH101 - Kalkulus I\n";  // Pesan
 
-    // --- Tambah departemen baru ---
-    Departemen depMatematika("Matematika", &dosen4);                 // Departemen Matematika
+    // --- Tambah PROGRAM STUDI baru ---
+    ProgramStudi depMatematika("Matematika", &dosen4);               // program studi Matematika
     depMatematika.tambahMataKuliah(mk4);                             // Tambah mk4 ke depMatematika
-    cout << "Ditambahkan departemen baru: Matematika\n";             // Pesan
+    cout << "Ditambahkan program studi baru: Matematika\n";          // Pesan
 
-    // --- Tambah mata kuliah ke departemen yang ada ---
+    // --- Tambah mata kuliah yang diajar Pak Budi ---
+    MataKuliah mk6("MATH201", "Aljabar", 3, &dosen3);                // MK keenam
+    depMatematika.tambahMataKuliah(mk6);                             // Tambah mk6 ke depMatematika
+    dosen3.ampuMataKuliah("MATH201");                                // dosen3 ampu MATH201
+    cout << "Ditambahkan mata kuliah baru yang diajar Pak Budi: MATH201 - Aljabar\n";  // Pesan
+
+    // --- Tambah mata kuliah ke PROGRAM STUDI yang ada ---
     MataKuliah mk5("CS301", "DPBO", 3, &dosen1);                     // MK kelima
     depIlkom.tambahMataKuliah(mk5);                                  // Tambah mk5 ke depIlkom
     dosen1.ampuMataKuliah("CS301");                                  // dosen1 ampu CS301
-    cout << "Ditambahkan mata kuliah baru ke departemen Ilmu Komputer: CS301 - DPBO\n";  // Pesan
+    cout << "Ditambahkan mata kuliah baru ke program studi Ilmu Komputer: CS301 - DPBO\n";  // Pesan
 
     // ========================== TAMPILKAN SESUDAH MENAMBAH ==========================
     cout << "\n>>> DATA SESUDAH DITAMBAHKAN <<<\n\n";    // Label sesudah menambah
@@ -100,7 +106,7 @@ int main() {                                                    // Fungsi utama 
     mhs2.display(); cout << "\n";                        // Tampilkan mhs2
     mhs3.display(); cout << "\n\n";                      // Tampilkan mhs3
 
-    cout << "--- DEPARTEMEN ---\n";                      // Label departemen
+    cout << "--- PROGRAM STUDI ---\n";                   // Label program studi
     depIlkom.display();                                  // Tampilkan depIlkom
     depFisika.display();                                 // Tampilkan depFisika
     depMatematika.display();                             // Tampilkan depMatematika

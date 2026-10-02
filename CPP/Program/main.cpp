@@ -62,7 +62,7 @@ int main() {                                                    // Fungsi utama 
     cout << "\n>>> MENAMBAHKAN DATA BARU <<<\n\n";               // Label menambah data
 
     // --- Tambah dosen baru ---
-    Dosen dosen4("Bu Dini", "P004", 60, "FIP", 1000000);         // Dosen keempat
+    Dosen dosen4("Bu Dini", "P004", 60, "FIP", 500000);          // Dosen keempat
     dosen4.ampuMataKuliah("PGSD101");                            // dosen4 ampu PGSD101
     cout << "Ditambahkan dosen baru: Bu Dini\n";                 // Pesan
 

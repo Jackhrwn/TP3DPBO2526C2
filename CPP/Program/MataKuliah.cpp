@@ -1,15 +1,15 @@
-#include <iostream>                                     // Library untuk input/output
-#include <string>                                       // Library untuk tipe data string
-#include <iomanip>                                      // Library untuk setw()
-using namespace std;                                    // Menggunakan namespace std
+#include <iostream>                                           // Library untuk input/output
+#include <string>                                             // Library untuk tipe data string
+#include <iomanip>                                            // Library untuk setw()
+using namespace std;                                          // Menggunakan namespace std
 
 // =================== MATA KULIAH (Composition: has-a Dosen) ====================
-class MataKuliah {                                      // Class mata kuliah (bukan turunan Orang)
-private:                                                // Hanya bisa diakses oleh class ini
-    string kodeMataKuliah;                              // Menyimpan kode mata kuliah
-    string namaMataKuliah;                              // Menyimpan nama mata kuliah
-    int sks;                                            // Menyimpan jumlah SKS
-    Dosen* dosen;                                       // Dosen yang mengajar (Composition)
+class MataKuliah {                                            // Class mata kuliah (bukan turunan Orang)
+private:                                                      // Hanya bisa diakses oleh class ini
+    string kodeMataKuliah;                                    // Menyimpan kode mata kuliah
+    string namaMataKuliah;                                    // Menyimpan nama mata kuliah
+    int sks;                                                  // Menyimpan jumlah SKS
+    Dosen* dosen;                                             // Dosen yang mengajar (Composition)
 
 public:                                                                          // Bisa diakses dari luar class
     MataKuliah(string kode, string nama, int sks, Dosen* dosen)                  // Constructor
@@ -28,9 +28,9 @@ public:                                                                         
     void setDosen(Dosen* d) { dosen = d; }                    // Ubah dosen
 
     void display() {                                          // Tampilkan data mata kuliah
-        cout << left << setw(5) << kodeMataKuliah << "  " << left << setw(12) << namaMataKuliah << " | ";  // Kode + nama 
+        cout << left << setw(5) << kodeMataKuliah << "  " << left << setw(16) << namaMataKuliah << " | ";  // Kode + nama 
         cout << "SKS: " << left << setw(1) << sks << " | ";   // SKS 
         cout << "Dosen: ";                                    // Label dosen
-        cout << dosen->getNama() << " (" << dosen->getProgramStudi() << ")";  // Nama dan program studi dosen
+        cout << dosen->getNama() << " (" << dosen->getNamaFakultas() << ")";  // Nama dan FAKULTAS dosen
     }
 };

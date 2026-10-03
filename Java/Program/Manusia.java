@@ -10,7 +10,6 @@ public class Manusia {                                          // Class dasar u
     }
 
     // --- Getter dan Setter ---
-
     public String getNama() { return nama; }                    // Ambil nama
     public String getId() { return id; }                        // Ambil ID
     public int getUmur() { return umur; }                       // Ambil umur

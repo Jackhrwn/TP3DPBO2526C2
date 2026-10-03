@@ -1,5 +1,4 @@
-#include <iostream>                                     // Library untuk input/output
-#include <string>                                       // Library untuk tipe data string
+#include <bits/stdc++.h>                                // Library standar lengkap C++
 using namespace std;                                    // Menggunakan namespace std
 
 // ============================ MANUSIA (Base Class) ============================
@@ -14,7 +13,6 @@ public:                                                 // Bisa diakses dari lua
         : nama(nama), id(id), umur(umur) {}             // Langsung assign ke attribute
 
     // --- Getter dan Setter ---
-
     string getNama() { return nama; }                   // Ambil nama
     string getId() { return id; }                       // Ambil ID
     int getUmur() { return umur; }                      // Ambil umur
@@ -24,6 +22,6 @@ public:                                                 // Bisa diakses dari lua
     void setUmur(int u) { umur = u; }                   // Ubah umur
 
     void display() {                                    // Tampilkan data manusia
-        cout << "Nama: " << nama << " | ID: " << id << " | Umur: " << umur;
-    }
-};
+        cout << "Nama: " << nama << " | ID: " << id << " | Umur: " << umur; // Cetak nama, ID, dan umur
+    }                                                   // Selesaikan metode display
+};                                                      // Selesaikan deklarasi class Manusia

@@ -5,24 +5,23 @@ class Manusia:                              # Class dasar untuk semua orang di u
         self.umur = umur                    # Inisialisasi umur
 
     # --- Getter dan Setter ---
-
     def get_nama(self):                     # Ambil nama
-        return self.nama
+        return self.nama                    # Kembalikan nama
 
     def get_id(self):                       # Ambil ID
-        return self.id
+        return self.id                      # Kembalikan ID
 
     def get_umur(self):                     # Ambil umur
-        return self.umur
+        return self.umur                    # Kembalikan umur
 
     def set_nama(self, n):                  # Ubah nama
-        self.nama = n
+        self.nama = n                       # Simpan nama baru
 
     def set_id(self, i):                    # Ubah ID
-        self.id = i
+        self.id = i                         # Simpan ID baru
 
     def set_umur(self, u):                  # Ubah umur
-        self.umur = u
+        self.umur = u                       # Simpan umur baru
 
     def display(self):                      # Tampilkan data manusia
-        return f"Nama: {self.nama} | ID: {self.id} | Umur: {self.umur}"
+        return f"Nama: {self.nama} | ID: {self.id} | Umur: {self.umur}"  # Kembalikan data manusia

@@ -2,46 +2,45 @@ from Manusia import Manusia                                 # Import class Manus
 
 # ======================= MAHASISWA (Turunan dari Manusia) =======================
 class Mahasiswa(Manusia):                                   # Mahasiswa mewarisi sifat Manusia
-    def __init__(self, nama, id, umur, jurusan, ipk):       # Constructor
+    def __init__(self, nama, id, umur, program_studi, ipk): # Constructor
         super().__init__(nama, id, umur)                    # Inisialisasi data
-        self.jurusan = jurusan                              # Menyimpan jurusan
+        self.program_studi = program_studi                  # Menyimpan program studi
         self.ipk = ipk                                      # Menyimpan IPK
         self.mata_kuliah_diambil = []                       # Menyimpan daftar mata kuliah yang diambil
 
     # --- Getter dan Setter ---
-
-    def get_jurusan(self):                                  # Ambil jurusan
-        return self.jurusan
+    def get_program_studi(self):                            # Ambil program studi
+        return self.program_studi                           # Kembalikan program studi
 
     def get_ipk(self):                                      # Ambil IPK
-        return self.ipk
+        return self.ipk                                     # Kembalikan IPK
 
     def get_mata_kuliah_diambil(self):                      # Ambil daftar mata kuliah
-        return self.mata_kuliah_diambil
+        return self.mata_kuliah_diambil.copy()              # Kembalikan salinan daftar
 
-    def set_jurusan(self, j):                               # Ubah jurusan
-        self.jurusan = j
+    def set_program_studi(self, nilai):                     # Ubah program studi
+        self.program_studi = nilai                          # Simpan program studi baru
 
     def set_ipk(self, i):                                   # Ubah IPK
-        self.ipk = i
+        self.ipk = i                                        # Simpan IPK baru
 
     def set_mata_kuliah_diambil(self, mk):                  # Ubah daftar mata kuliah
-        self.mata_kuliah_diambil = mk
+        self.mata_kuliah_diambil = list(mk)                 # Simpan salinan daftar baru
 
     def ambil_mata_kuliah(self, kode_mata_kuliah):          # Mahasiswa mengambil mata kuliah
         self.mata_kuliah_diambil.append(kode_mata_kuliah)   # Tambahkan ke daftar
 
-    def display(self):                                      # Tampilkan data mahasiswa
-        result = "[MAHASISWA] "                             # Label mahasiswa
-        result += f"{self.nama:<6} | "                      # Nama (lebar 6 + 2 spasi)
-        result += f"ID: {self.id:<3} | "                    # ID (lebar 3 + 2 spasi)
-        result += f"Umur: {self.umur:<1} | "                # Umur (lebar 1 + 2 spasi)
-        result += f"Jurusan: {self.jurusan:<10} | "         # Jurusan (lebar 10 + 2 spasi)
-        result += f"IPK: {self.ipk:<2}"                     # IPK (lebar 2)
-        if self.mata_kuliah_diambil:                        # Jika ada mata kuliah
-            result += " | Mata Kuliah: "                    # Label mata kuliah
-            for i, kode in enumerate(self.mata_kuliah_diambil):  # Loop semua mata kuliah
-                result += kode                              # Tampilkan kode mata kuliah
-                if i < len(self.mata_kuliah_diambil) - 1:   # Pemisah antar mata kuliah
-                    result += ", "
-        return result                                       # Kembalikan result
+    def display(self, nomor=1):                             # Susun data mahasiswa dalam bingkai
+        lines = [                                           # Siapkan baris data mahasiswa
+            f"[{nomor}] Mahasiswa",                         # Tambahkan judul dan nomor mahasiswa
+            f"    ID Mahasiswa  : {self.id}",               # Tampilkan ID mahasiswa
+            f"    Nama          : {self.nama}",             # Tampilkan nama mahasiswa
+            f"    Umur          : {self.umur}",             # Tampilkan umur mahasiswa
+            f"    Program Studi : {self.program_studi}",    # Tampilkan program studi mahasiswa
+            f"    IPK           : {self.ipk:.2f}",          # Tampilkan IPK dengan dua desimal
+        ]
+        for indeks, kode in enumerate(self.mata_kuliah_diambil, start=1):   # Tampilkan setiap mata kuliah yang diambil
+            lines.append(f"    [{indeks}] Mata Kuliah Diambil : {kode}")    # Tambahkan mata kuliah yang diambil
+        lebar = 52                                          # Gunakan lebar bingkai tetap
+        batas = "+" + "-" * (lebar + 2) + "+"               # Buat batas bingkai
+        return "\n" + "\n".join([batas, *(f"| {line:<{lebar}} |" for line in lines), batas])  # Kembalikan bingkai

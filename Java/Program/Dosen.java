@@ -2,23 +2,23 @@ import java.util.ArrayList; // Import ArrayList untuk menyimpan daftar mata kuli
 
 // ====================== DOSEN (Turunan dari Manusia) =======================
 public class Dosen extends Manusia {                                                    // Dosen mewarisi sifat Manusia
-    private String namaFakultas;                                                        // Menyimpan FAKULTAS dosen
+    private String namaFakultas;                                                        // Menyimpan Fakultas dosen
     private double gaji;                                                                // Menyimpan gaji dosen
     private ArrayList<String> mataKuliahDiajar = new ArrayList<>();                     // Menyimpan daftar mata kuliah yang diajar
 
     public Dosen(String nama, String id, int umur, String namaFakultas, double gaji) {  // Constructor
         super(nama, id, umur);                                                          // Panggil constructor kelas induk (Manusia)
-        this.namaFakultas = namaFakultas;                                               // Inisialisasi FAKULTAS
+        this.namaFakultas = namaFakultas;                                               // Inisialisasi Fakultas
         this.gaji = gaji;                                                               // Inisialisasi gaji
     }
 
     // --- Getter dan Setter ---
 
-    public String getNamaFakultas() { return namaFakultas; }                            // Ambil FAKULTAS
+    public String getNamaFakultas() { return namaFakultas; }                            // Ambil Fakultas
     public double getGaji() { return gaji; }                                            // Ambil gaji
     public ArrayList<String> getMataKuliahDiajar() { return mataKuliahDiajar; }         // Ambil daftar mata kuliah
 
-    public void setNamaFakultas(String d) { namaFakultas = d; }                         // Ubah FAKULTAS
+    public void setNamaFakultas(String d) { namaFakultas = d; }                         // Ubah Fakultas
     public void setGaji(double g) { gaji = g; }                                         // Ubah gaji
     public void setMataKuliahDiajar(ArrayList<String> mk) { mataKuliahDiajar = mk; }    // Ubah daftar mata kuliah
 

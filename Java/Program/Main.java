@@ -1,4 +1,4 @@
-public class Main { // Class utama program
+public class Main {                                                                 // Class utama program
     public static void main(String[] args) {                                        // Fungsi utama program
         System.out.println("==================================================");   // Separator atas
         System.out.println("           SISTEM MANAJEMEN UNIVERSITAS");              // Judul program

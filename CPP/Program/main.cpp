@@ -78,7 +78,7 @@ int main() {                                                    // Fungsi utama 
     // --- Tambah Fakultas baru ---
     Fakultas fakFIP("FIP", &dosen4);                             // Fakultas FIP
     fakFIP.tambahMataKuliah(mk4);                                // Tambah mk4 ke fakFIP
-    cout << "Ditambahkan FAKULTAS baru: FIP\n";                  // Pesan
+    cout << "Ditambahkan fakultas baru: FIP\n";                  // Pesan
 
     // --- Tambah mata kuliah yang diajar Pak Budi ---
     MataKuliah mk6("BIM201", " Bimbingan Konseling", 3, &dosen3);// MK keenam
@@ -86,11 +86,11 @@ int main() {                                                    // Fungsi utama 
     dosen3.ampuMataKuliah("BIM201");                             // dosen3 ampu BIM201
     cout << "Ditambahkan mata kuliah baru yang diajar Pak Budi: BIM201 - Bimbingan Konseling\n";  // Pesan
 
-    // --- Tambah mata kuliah ke FAKULTAS yang ada ---
+    // --- Tambah mata kuliah ke fakultas yang ada ---
     MataKuliah mk5("MIPA301", "Kimia Analitik", 3, &dosen1);     // MK kelima
     fakIlkom.tambahMataKuliah(mk5);                              // Tambah mk5 ke fakIlkom
     dosen1.ampuMataKuliah("MIPA301");                            // dosen1 ampu MIPA301
-    cout << "Ditambahkan mata kuliah baru ke FAKULTAS FPMIPA: MIPA301 - Kimia Analitik\n";  // Pesan
+    cout << "Ditambahkan mata kuliah baru ke fakultas FPMIPA: MIPA301 - Kimia Analitik\n";  // Pesan
 
     // ========================== TAMPILKAN SESUDAH MENAMBAH ==========================
     cout << "\n>>> DATA SESUDAH DITAMBAHKAN <<<\n\n";            // Label sesudah menambah

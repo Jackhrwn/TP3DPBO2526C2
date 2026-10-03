@@ -33,7 +33,7 @@ public:                                                             // Bisa diak
     void display() {                                                // Tampilkan data Fakultas
         vector<string> lines;                                       // Simpan semua baris output
 
-        lines.push_back("FAKULTAS: " + nama);                       // Baris nama Fakultas
+        lines.push_back("Fakultas: " + nama);                       // Baris nama Fakultas
 
         string barisDekan = "Dekan: " + dekan->getNama() + " (ID: " + dekan->getId() + ")";  // Baris dekan
         lines.push_back(barisDekan);                                // Simpan baris dekan

@@ -180,7 +180,7 @@ Alur program untuk ketiga bahasa (C++, Python, Java):
    - Menambahkan MTK301 (Kalkulus II, 3 SKS) ke Matematika (`PS002`).
    - Membuat Dosen D004 (Bu Dini), yang mengampu PGSD101 dan PGSD201; Pak Budi juga ditambahkan sebagai pengampu MTK301.
    - Membuat Mahasiswa M003 (Repan), yang mengambil PGSD101 dan PGSD201.
-   - Saat penambahan, program mencetak ringkasan berlabel “Fakultas baru”, “Program studi baru”, “Mata kuliah baru”, “Dosen baru”, dan “Mahasiswa baru”; ringkasan tersebut bukan pesan status `[BERHASIL]`.
+   - Saat penambahan, program mencetak ringkasan berlabel “Fakultas baru”, “Program studi baru”, “Mata kuliah baru”, “Dosen baru”, dan “Mahasiswa baru”.
 
 4. **Display Data Sesudah Penambahan**
    - Menampilkan Fakultas beserta ProgramStudi dan MataKuliah yang telah diperbarui.

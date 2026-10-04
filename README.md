@@ -205,8 +205,8 @@ Alur program untuk ketiga bahasa (C++, Python, Java):
 **Data Baru**
 
 ![Data Baru1](Python/Dokumentasi/Data%20Baru1.png)
-![Data Baru1](Python/Dokumentasi/Data%20Baru1.png)
-![Data Baru1](Python/Dokumentasi/Data%20Baru1.png)
+![Data Baru2](Python/Dokumentasi/Data%20Baru2.png)
+![Data Baru3](Python/Dokumentasi/Data%20Baru3.png)
 
 *Catatan: Dokumentasi tangkapan layar untuk masing-masing bahasa tersedia di folder [C++](CPP/Dokumentasi/), [Java](Java/Dokumentasi/), dan [Python](Python/Dokumentasi/).*
 
